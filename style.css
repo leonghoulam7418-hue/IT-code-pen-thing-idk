@@ -1,0 +1,62 @@
+/* *{
+  border: solid 1px black;
+} */
+html,
+body {
+  background-color: #222;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0px;
+}
+.card {
+  width: 800px;
+  display: flex;
+  /*   border: solid 2px black; */
+  background-color: #fff;
+  border-raidus: 20px;
+  overflow: hidden;
+}
+.left {
+  width: 30%;
+  background-image: url(https://cdn-general.cybassets.com/s/files/28976/ckeditor/pictures/content_a4ac6012-5233-4a81-a98d-859e99e30345.png);
+  background-size: cover;
+}
+
+.right {
+  width: 70%;
+  padding: 20px;
+}
+
+ul li {
+  /*   width: 30%; */
+  display: inline-block;
+  vertical-align: top;
+  background-color: #5a3226;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.smalltext {
+  font-size: 15px;
+  color: #999;
+  margin-left: 20px;
+  font-weight: normal;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #5a3226;
+}
+
+p {
+  line-height: 25px;
+}
+
+ul {
+  padding-left: 0px;
+}
