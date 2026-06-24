@@ -100,7 +100,8 @@ input[type="radio"] {
 .panel {
   display: none;
   min-height: 250px;
-  animation: fadeIn 0.3s ease-in-out forwards;
+  -webkit-animation: fadeIn 0.3s ease-in-out forwards;
+          animation: fadeIn 0.3s ease-in-out forwards;
 }
 
 #tab-about:checked ~ .tab-content .panel-about,
@@ -120,6 +121,17 @@ input[type="radio"] {
 #tab-community:checked ~ .tab-navigation label[for="tab-community"] {
   color: #ffffff;
   background-color: var(--primary-color);
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
@@ -151,7 +163,8 @@ input[type="radio"] {
 .image-placeholder img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .image-item-layout {
@@ -216,14 +229,27 @@ input[type="radio"] {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  animation: zoomIn 0.25s ease;
+  -webkit-animation: zoomIn 0.25s ease;
+          animation: zoomIn 0.25s ease;
 }
 
 .lightbox-content img {
   max-width: 100%;
   max-height: 75vh;
   display: block;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes zoomIn {
